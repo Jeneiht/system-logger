@@ -1,0 +1,14 @@
+#!/bin/bash
+set -e
+
+# Post-installation script
+echo "Setting up system-logger..."
+
+# Reload systemd to apply any configuration changes
+systemctl daemon-reload
+
+# Enable and start the service
+systemctl enable system-logger.service
+systemctl start system-logger.service
+
+exit 0

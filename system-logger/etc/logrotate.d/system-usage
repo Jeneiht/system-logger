@@ -1,0 +1,8 @@
+/var/log/system-usage.log {
+    daily
+    rotate 7
+    missingok
+    notifempty
+    compress
+    create 0644 root root
+}

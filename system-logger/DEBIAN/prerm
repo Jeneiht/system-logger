@@ -1,0 +1,12 @@
+#!/bin/bash
+set -e
+
+# Pre-removal script
+echo "Preparing to remove system-logger..."
+
+# Stop the service if it's currently running
+if systemctl is-active --quiet system-logger.service; then
+    systemctl stop system-logger.service
+fi
+
+exit 0

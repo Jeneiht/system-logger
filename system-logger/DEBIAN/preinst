@@ -1,0 +1,12 @@
+#!/bin/bash
+set -e
+
+# Pre-installation script
+echo "Preparing to install system-logger..."
+
+# Check if service is already running
+if systemctl is-active --quiet system-logger.service; then
+    systemctl stop system-logger.service
+fi
+
+exit 0

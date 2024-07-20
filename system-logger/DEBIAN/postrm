@@ -1,0 +1,10 @@
+#!/bin/bash
+set -e
+
+# Post-removal script
+echo "Cleaning up system-logger..."
+
+# Reload systemctl after removal
+systemctl daemon-reload
+
+exit 0
